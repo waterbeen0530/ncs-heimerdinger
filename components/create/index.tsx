@@ -37,8 +37,8 @@ export default function Index() {
             accept="image/*"
             onChange={fileChange}
           />
-          <Preview img={imgView}></Preview>
-          <ImageLabel htmlFor="listImage">
+          {/* <Preview img={imgView}></Preview> */}
+          <ImageLabel htmlFor="listImage" img={imgView}>
             <Image src="/imgs/create/camera.png" /> <br />
             이미지 업로드
             <br />
