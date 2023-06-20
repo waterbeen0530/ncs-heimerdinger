@@ -1,14 +1,21 @@
 import { theme } from "@/styles/theme";
 import styled from "@emotion/styled";
+import Link from "next/link";
 
 export default function Header() {
   return (
     <Container>
       <Wrapper>
-        <Image src="/imgs/header/logo.png" />
+        <Link href="/">
+          <Image src="/imgs/header/logo.png" />
+        </Link>
         <TextBox>
-          <Text>인증하기</Text>
-          <Text>인증목록</Text>
+          <Link href="/create">
+            <Text>인증하기</Text>
+          </Link>
+          <Link href="/list">
+            <Text>인증목록</Text>
+          </Link>
         </TextBox>
       </Wrapper>
     </Container>

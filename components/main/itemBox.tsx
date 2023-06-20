@@ -1,5 +1,6 @@
 import { theme } from "@/styles/theme";
 import styled from "@emotion/styled";
+import Link from "next/link";
 
 export default function ItemBox() {
   return (
@@ -11,8 +12,12 @@ export default function ItemBox() {
         <Now>현재 누적 인증 수: 3</Now>
       </TextBox>
       <ButtonBox>
-        <Button>인증하기</Button>
-        <Button>인증하기</Button>
+        <Link href="/create">
+          <Button>인증하기</Button>
+        </Link>
+        <Link href="/list">
+          <Button>인증목록</Button>
+        </Link>
       </ButtonBox>
     </Container>
   );
@@ -93,4 +98,5 @@ const Button = styled.button`
   font-weight: 700;
   color: ${theme.WHITE1};
   background-color: ${theme.PURPLE1};
+  cursor: pointer;
 `;
